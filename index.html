@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MindBloom — Student Mental Health Hub</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- ─── CANVAS BACKGROUND ─── -->
+<canvas id="bgCanvas"></canvas>
+
+<!-- ─── NAVBAR ─── -->
+<nav class="navbar">
+  <div class="nav-logo">🧠 MindBloom</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#symptoms">Symptoms</a></li>
+    <li><a href="#breathing">Breathe</a></li>
+    <li><a href="#stress-test">Stress Test</a></li>
+    <li><a href="#quotes">Quotes</a></li>
+    <li><a href="#tips">Tips</a></li>
+    <li><a href="#resources">Help</a></li>
+  </ul>
+  <button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
+  <div class="hamburger" id="hamburger">&#9776;</div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<header class="hero" id="hero">
+  <div class="hero-content">
+    <span class="hero-eyebrow">Student Mental Health Initiative</span>
+    <h1 class="hero-title">Your Mind<br><span class="accent">Matters</span></h1>
+    <p class="hero-sub">Stress and anxiety are not signs of weakness — they are signals your mind needs care. This is your space to understand, breathe, and heal.</p>
+    <div class="hero-cta">
+      <a href="#breathing" class="btn btn-primary">Start Breathing Exercise</a>
+      <a href="#stress-test" class="btn btn-outline">Take Stress Test</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-card glow-card">
+        <span class="stat-num">75%</span>
+        <span class="stat-label">Students experience anxiety</span>
+      </div>
+      <div class="stat-card glow-card">
+        <span class="stat-num">1 in 3</span>
+        <span class="stat-label">Reported moderate-severe stress</span>
+      </div>
+      <div class="stat-card glow-card">
+        <span class="stat-num">80%</span>
+        <span class="stat-label">Never seek professional help</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="brain-ring ring1"></div>
+    <div class="brain-ring ring2"></div>
+    <div class="brain-ring ring3"></div>
+    <img src="https://images.unsplash.com/photo-1541199249251-f713e6145474?w=500&q=80" alt="Student stressed over books" class="hero-img" />
+  </div>
+</header>
+
+<!-- ─── ABOUT ─── -->
+<section class="section" id="about">
+  <div class="section-inner">
+    <span class="section-tag">Understanding the Problem</span>
+    <h2 class="section-title">What Is Student Stress & Anxiety?</h2>
+    <div class="about-grid">
+      <div class="about-card glow-card">
+        <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=400&q=80" alt="Student studying late" />
+        <h3>Academic Stress</h3>
+        <p>Deadlines, exams, grades, and the pressure to perform — academic environments are one of the biggest triggers for chronic student stress. Prolonged exposure leads to burnout, poor memory, and health deterioration.</p>
+      </div>
+      <div class="about-card glow-card">
+        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&q=80" alt="Student alone" />
+        <h3>Social Anxiety</h3>
+        <p>Fear of judgment, social isolation, comparison culture amplified by social media — these fuel anxiety that makes even attending class feel overwhelming. This is real and far more common than you think.</p>
+      </div>
+      <div class="about-card glow-card">
+        <img src="https://images.unsplash.com/photo-1493836512294-502baa1986e2?w=400&q=80" alt="Student thinking" />
+        <h3>Generalized Anxiety</h3>
+        <p>Persistent worry about the future, career, finances, and family expectations creates a low-grade anxiety that never quite switches off — affecting sleep, focus, and relationships over time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SYMPTOMS ─── -->
+<section class="section alt-section" id="symptoms">
+  <div class="section-inner">
+    <span class="section-tag">Know the Signs</span>
+    <h2 class="section-title">Symptoms to Watch For</h2>
+    <p class="section-desc">Hover over each symptom to learn more about it.</p>
+    <div class="symptoms-grid">
+
+      <div class="symptom-card glow-card" data-info="Racing heart, sweating, trembling, and shortness of breath are your body's alarm system — 'fight or flight' stuck in overdrive.">
+        <div class="symptom-icon">💓</div>
+        <h4>Rapid Heartbeat</h4>
+        <div class="symptom-tooltip">Racing heart, sweating, trembling — your body's alarm in overdrive.</div>
+      </div>
+
+      <div class="symptom-card glow-card" data-info="Cortisol (the stress hormone) disrupts your sleep cycle, making it hard to fall or stay asleep, leaving you exhausted.">
+        <div class="symptom-icon">😴</div>
+        <h4>Sleep Disruption</h4>
+        <div class="symptom-tooltip">Cortisol disrupts sleep cycles — hard to fall asleep, stay asleep.</div>
+      </div>
+
+      <div class="symptom-card glow-card" data-info="Anxiety shrinks working memory and impairs concentration, making studying feel impossibly difficult.">
+        <div class="symptom-icon">🧩</div>
+        <h4>Poor Concentration</h4>
+        <div class="symptom-tooltip">Anxiety shrinks working memory, making studying extremely difficult.</div>
+      </div>
+
+      <div class="symptom-card glow-card" data-info="Chronic stress causes real physical pain: headaches, muscle tension, stomach issues, and fatigue.">
+        <div class="symptom-icon">🤕</div>
+        <h4>Physical Pain</h4>
+        <div class="symptom-tooltip">Headaches, muscle tension, stomach issues — stress is physical too.</div>
+      </div>
+
+      <div class="symptom-card glow-card" data-info="Withdrawing from friends, avoiding social situations, and losing interest in activities you once loved.">
+        <div class="symptom-icon">🚪</div>
+        <h4>Social Withdrawal</h4>
+        <div class="symptom-tooltip">Pulling away from friends and activities you once enjoyed.</div>
+      </div>
+
+      <div class="symptom-card glow-card" data-info="Constant negative self-talk, feeling like a failure, persistent pessimism, and hopelessness.">
+        <div class="symptom-icon">💭</div>
+        <h4>Negative Thoughts</h4>
+        <div class="symptom-tooltip">Persistent pessimism and feeling like a failure.</div>
+      </div>
+
+      <div class="symptom-card glow-card" data-info="Stress hormones can suppress appetite or trigger stress-eating, disrupting normal hunger cues.">
+        <div class="symptom-icon">🍽️</div>
+        <h4>Appetite Changes</h4>
+        <div class="symptom-tooltip">Stress hormones suppress appetite or trigger emotional eating.</div>
+      </div>
+
+      <div class="symptom-card glow-card" data-info="Feeling exhausted despite sleeping enough — mental exhaustion drains physical energy reserves.">
+        <div class="symptom-icon">🔋</div>
+        <h4>Constant Fatigue</h4>
+        <div class="symptom-tooltip">Mental exhaustion drains physical energy even after sleep.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── BREATHING EXERCISE ─── -->
+<section class="section" id="breathing">
+  <div class="section-inner">
+    <span class="section-tag">Calm Your Nervous System</span>
+    <h2 class="section-title">Guided Breathing Exercise</h2>
+    <p class="section-desc">The 4-7-8 technique activates your parasympathetic nervous system in under 2 minutes.</p>
+
+    <div class="breathing-container">
+      <div class="breath-visual" id="breathCircle">
+        <div class="breath-inner">
+          <span id="breathPhase">Press Start</span>
+          <span id="breathCount"></span>
+        </div>
+      </div>
+      <div class="breathing-controls">
+        <button class="btn btn-primary" id="breathStart">▶ Start</button>
+        <button class="btn btn-outline" id="breathStop" disabled>⏹ Stop</button>
+        <select id="breathTechnique" class="breath-select">
+          <option value="478">4-7-8 (Relaxing)</option>
+          <option value="box">Box Breathing (Focus)</option>
+          <option value="24">2-4 (Quick Calm)</option>
+        </select>
+      </div>
+      <div class="breath-info">
+        <div class="breath-step glow-card">
+          <span class="step-num">①</span>
+          <span>Inhale through nose</span>
+        </div>
+        <div class="breath-step glow-card">
+          <span class="step-num">②</span>
+          <span>Hold breath gently</span>
+        </div>
+        <div class="breath-step glow-card">
+          <span class="step-num">③</span>
+          <span>Exhale slowly through mouth</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── STRESS TEST ─── -->
+<section class="section alt-section" id="stress-test">
+  <div class="section-inner">
+    <span class="section-tag">Know Your Level</span>
+    <h2 class="section-title">Quick Stress Assessment</h2>
+    <p class="section-desc">Answer 8 honest questions. No data is stored. Results are instant.</p>
+
+    <div class="quiz-container glow-card" id="quizContainer">
+      <div class="quiz-progress">
+        <div class="quiz-bar" id="quizBar"></div>
+      </div>
+      <div id="quizContent">
+        <div class="quiz-question" id="quizQ"></div>
+        <div class="quiz-options" id="quizOpts"></div>
+      </div>
+      <div id="quizResult" class="quiz-result hidden"></div>
+      <div class="quiz-nav">
+        <button class="btn btn-outline" id="quizPrev" disabled>← Prev</button>
+        <span id="quizCounter">1 / 8</span>
+        <button class="btn btn-primary" id="quizNext">Next →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CAUSES ─── -->
+<section class="section" id="causes">
+  <div class="section-inner">
+    <span class="section-tag">Root Causes</span>
+    <h2 class="section-title">Why Are Students So Stressed?</h2>
+    <div class="causes-list">
+      <div class="cause-item glow-card">
+        <div class="cause-icon">📚</div>
+        <div>
+          <h4>Academic Overload</h4>
+          <p>Unrealistic syllabus demands, multiple deadlines simultaneously, competitive grading, and fear of failure create a pressure cooker environment.</p>
+        </div>
+      </div>
+      <div class="cause-item glow-card">
+        <div class="cause-icon">📱</div>
+        <div>
+          <h4>Social Media Comparison</h4>
+          <p>Constant exposure to curated highlight reels makes students feel they are falling behind peers, fueling inadequacy and anxiety.</p>
+        </div>
+      </div>
+      <div class="cause-item glow-card">
+        <div class="cause-icon">💰</div>
+        <div>
+          <h4>Financial Pressure</h4>
+          <p>Tuition fees, loan anxiety, part-time work alongside studies, and uncertainty about future earnings create persistent background stress.</p>
+        </div>
+      </div>
+      <div class="cause-item glow-card">
+        <div class="cause-icon">🏠</div>
+        <div>
+          <h4>Family Expectations</h4>
+          <p>Parental pressure around grades, career choices, and "success" can feel suffocating — especially when aspirations don't align.</p>
+        </div>
+      </div>
+      <div class="cause-item glow-card">
+        <div class="cause-icon">🌐</div>
+        <div>
+          <h4>Uncertain Future</h4>
+          <p>Job market anxiety, competitive career landscapes, and unclear paths post-graduation generate existential stress that feels unresolvable.</p>
+        </div>
+      </div>
+      <div class="cause-item glow-card">
+        <div class="cause-icon">😶</div>
+        <div>
+          <h4>Lack of Coping Skills</h4>
+          <p>Many students were never taught emotional regulation, stress management, or how to ask for help — leaving them ill-equipped when overwhelmed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── MOTIVATIONAL QUOTES ─── -->
+<section class="section alt-section" id="quotes">
+  <div class="section-inner">
+    <span class="section-tag">Daily Dose of Perspective</span>
+    <h2 class="section-title">Words That Help</h2>
+    <div class="quote-carousel">
+      <div class="quote-display glow-card" id="quoteDisplay">
+        <div class="quote-mark">"</div>
+        <p class="quote-text" id="quoteText">You don't have to see the whole staircase, just take the first step.</p>
+        <span class="quote-author" id="quoteAuthor">— Martin Luther King Jr.</span>
+      </div>
+      <div class="quote-controls">
+        <button class="btn btn-outline quote-btn" id="prevQuote">←</button>
+        <button class="btn btn-primary quote-btn" id="nextQuote">Next Quote →</button>
+        <button class="btn btn-outline quote-btn" id="randomQuote">🎲 Random</button>
+      </div>
+      <div class="quote-dots" id="quoteDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TIPS ─── -->
+<section class="section" id="tips">
+  <div class="section-inner">
+    <span class="section-tag">Evidence-Based Strategies</span>
+    <h2 class="section-title">What Actually Helps</h2>
+    <div class="tips-tabs">
+      <button class="tab-btn active" data-tab="physical">Physical</button>
+      <button class="tab-btn" data-tab="mental">Mental</button>
+      <button class="tab-btn" data-tab="social">Social</button>
+      <button class="tab-btn" data-tab="academic">Academic</button>
+    </div>
+    <div class="tips-content" id="tipsContent">
+      <!-- filled by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ─── MOOD TRACKER ─── -->
+<section class="section alt-section" id="mood">
+  <div class="section-inner">
+    <span class="section-tag">Check In With Yourself</span>
+    <h2 class="section-title">How Are You Feeling Right Now?</h2>
+    <div class="mood-tracker glow-card">
+      <p class="mood-prompt">Select the emoji that best matches your current mood:</p>
+      <div class="mood-emojis">
+        <button class="mood-btn" data-mood="5" data-label="Thriving">😄</button>
+        <button class="mood-btn" data-mood="4" data-label="Good">🙂</button>
+        <button class="mood-btn" data-mood="3" data-label="Okay">😐</button>
+        <button class="mood-btn" data-mood="2" data-label="Struggling">😟</button>
+        <button class="mood-btn" data-mood="1" data-label="Overwhelmed">😰</button>
+      </div>
+      <div class="mood-response hidden" id="moodResponse"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── AFFIRMATIONS CORNER ─── -->
+<section class="section" id="affirmations">
+  <div class="section-inner">
+    <span class="section-tag">Rewire Your Mind</span>
+    <h2 class="section-title">Daily Affirmations</h2>
+    <p class="section-desc">Read these slowly. Breathe. Let them in.</p>
+    <div class="affirmations-grid">
+      <div class="affirmation-card glow-card">✨ I am doing the best I can with what I have.</div>
+      <div class="affirmation-card glow-card">🌱 My struggles do not define my worth.</div>
+      <div class="affirmation-card glow-card">💪 I have overcome hard things before. I will again.</div>
+      <div class="affirmation-card glow-card">🧠 Rest is not laziness — it is part of success.</div>
+      <div class="affirmation-card glow-card">🌊 It's okay to ask for help. That takes courage.</div>
+      <div class="affirmation-card glow-card">⭐ Progress is not linear. Every small step counts.</div>
+    </div>
+    <div class="affirmation-custom glow-card">
+      <h4>Write Your Own Affirmation</h4>
+      <input type="text" id="customAffirmation" placeholder="I am..." maxlength="100" />
+      <button class="btn btn-primary" id="saveAffirmation">Save ✓</button>
+      <div class="saved-affirmations" id="savedAffirmations"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── RESOURCES ─── -->
+<section class="section alt-section" id="resources">
+  <div class="section-inner">
+    <span class="section-tag">You Are Not Alone</span>
+    <h2 class="section-title">Get Help & Support</h2>
+    <div class="resources-grid">
+      <div class="resource-card glow-card emergency">
+        <div class="resource-icon">🆘</div>
+        <h4>In Crisis Now?</h4>
+        <p>iCall India: <strong>9152987821</strong></p>
+        <p>Vandrevala Foundation: <strong>1860-2662-345</strong></p>
+        <p>Available 24/7. You matter.</p>
+      </div>
+      <div class="resource-card glow-card">
+        <div class="resource-icon">🏥</div>
+        <h4>Counselling</h4>
+        <p>Most universities offer free counselling services. Visit your campus health center or student services desk today.</p>
+      </div>
+      <div class="resource-card glow-card">
+        <div class="resource-icon">📖</div>
+        <h4>Self-Help Resources</h4>
+        <p>Books: "The Anxiety and Worry Workbook" — CBT-based strategies for students. Free PDFs available online.</p>
+      </div>
+      <div class="resource-card glow-card">
+        <div class="resource-icon">🧘</div>
+        <h4>Apps That Help</h4>
+        <p>Headspace, Calm, InnerHour, Wysa — evidence-backed apps for guided meditation and CBT exercises.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="nav-logo">🧠 MindBloom</span>
+      <p>Your mental health is as important as your grades. Always.</p>
+    </div>
+    <div class="footer-note">
+      <p>⚠️ This page is for educational purposes only and does not replace professional mental health care.</p>
+      <p>Made with 💙 for every student who's ever felt overwhelmed.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
